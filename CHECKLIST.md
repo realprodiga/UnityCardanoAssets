@@ -82,7 +82,3 @@
 - [ ] Final close-out report
 - [ ] Final close-out video
 - [ ] Share on Cardano forum and social media
-
-### Evidence of Milestone Completion
-- [ ] Provide link to final close-out report
-- [ ] Provide link to final close-out video
