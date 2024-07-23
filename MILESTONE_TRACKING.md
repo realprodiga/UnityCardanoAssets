@@ -1,4 +1,4 @@
-# Milestone Checklist
+# Milestone Tracking
 
 ## Milestone 1: Cardano Integration Scripts
 
