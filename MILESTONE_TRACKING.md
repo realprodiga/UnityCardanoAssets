@@ -3,10 +3,10 @@
 ## Milestone 1: Cardano Integration Scripts
 
 ### Blockfrost Integration Script
-- ✅ **[x] Implement methods for `Cardano > Accounts`** (Completed)
-- ✅ Implement methods for `Cardano > Addresses`
-- ✅ Implement methods for `Cardano > Assets`
-- ✅ Implement methods for `Cardano > Transactions`
+- [x] Implement methods for `Cardano > Accounts` (COMPLETE)
+- [x] Implement methods for `Cardano > Addresses` (COMPLETE)
+- [x] Implement methods for `Cardano > Assets` (COMPLETE)
+- [x] Implement methods for `Cardano > Transactions` (COMPLETE)
 - [ ] Framework to add additional Blockfrost.io API endpoints
 - [ ] Demonstration video
 
