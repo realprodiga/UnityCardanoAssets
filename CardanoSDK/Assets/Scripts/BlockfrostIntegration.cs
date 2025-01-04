@@ -8,11 +8,13 @@ using System.Collections.Generic;
 /// using the Blockfrost API. It currently fetches and displays information about a specific
 /// stake account, associated addresses, assets, specific addresses, assets, and transactions.
 /// Future extensions can include additional endpoints and functionalities.
+/// Get a Blockfrost Project ID from https://blockfrost.io/ 
+/// Free plans allow 50,000 requests per day. Paid plans are also available.
 /// </summary>
 public class BlockfrostIntegration : MonoBehaviour
 {
     [Header("Blockfrost Settings")]
-    [Tooltip("Your Blockfrost Project ID (API Token)")]
+    [Tooltip("Your Blockfrost Project ID (API Token)")] 
     public string ProjectId;
 
     [Tooltip("Cardano Stake Address to Query")]
