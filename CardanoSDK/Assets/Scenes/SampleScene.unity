@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48971433975fd4a871c9b8463dac45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectId: mainnetrHku3dR7Rcw2QHKEeLm0rI17yJpTJY9l
+  ProjectId: 
   StakeAddress: stake1u8xgz6ed4vsqwnvpe3qv57mel575h0yhmkl70sts3fqysgsz95350
   SpecificAddress: addr1qxldsu4ktsn8syd0w2y6k92f4a3dtqwqrgj6qkgdknmejjkvs94jm2eqqaxcrnzqefahnlfafw7f0hdlulqhpzjqfq3qduxdnp
   SpecificAssetId: ff1463bdfaf9268cafba9918a4b389723a90a21b3a4068d36b2fe40547696e676572427265616435313838
