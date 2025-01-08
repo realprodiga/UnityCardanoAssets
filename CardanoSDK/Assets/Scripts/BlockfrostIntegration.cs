@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 /// <summary>
 /// BlockfrostIntegration handles the interaction between Unity and the Cardano blockchain
@@ -14,7 +15,7 @@ using System.Collections.Generic;
 public class BlockfrostIntegration : MonoBehaviour
 {
     [Header("Blockfrost Settings")]
-    [Tooltip("Your Blockfrost Project ID (API Token)")] 
+    [Tooltip("Your Blockfrost Project ID (API Token)")]
     public string ProjectId;
 
     [Tooltip("Cardano Stake Address to Query")]
@@ -37,10 +38,27 @@ public class BlockfrostIntegration : MonoBehaviour
     private readonly string MilkomedaMainnetUrl = "https://milkomeda-mainnet.blockfrost.io/api/v0";
     private readonly string MilkomedaTestnetUrl = "https://milkomeda-testnet.blockfrost.io/api/v0";
 
-    /// <summary>
-    /// Unity's Start method is called on the frame when a script is enabled just before
-    /// any of the Update methods are called the first time.
-    /// </summary>
+    [Header("UI References for Account Info")]
+    public TMP_InputField stakeAddressText;
+    public TMP_InputField activeText;
+    public TMP_InputField activeEpochText;
+    public TMP_InputField controlledAmountText;
+    public TMP_InputField rewardsSumText;
+    public TMP_InputField withdrawalsSumText;
+    public TMP_InputField reservesSumText;
+    public TMP_InputField treasurySumText;
+    public TMP_InputField withdrawableAmountText;
+    public TMP_InputField poolIdText;
+    public TMP_InputField drepIdText;
+
+    [Header("UI References for Address Info")]
+    public TMP_InputField addressInfoAddress;
+    public TMP_InputField addressInfoAmounts;
+    public TMP_InputField addressInfoStakeAddress;
+    public TMP_InputField addressInfoType;
+    public TMP_InputField addressInfoScript;
+
+
     private void Start()
     {
         if (string.IsNullOrEmpty(ProjectId))
@@ -74,15 +92,15 @@ public class BlockfrostIntegration : MonoBehaviour
         }
 
         // Start the coroutine to fetch stake account information
-        StartCoroutine(GetStakeAccountInfo());
+        //StartCoroutine(GetStakeAccountInfo());
 
         // Start additional coroutines for other endpoints
-        StartCoroutine(GetAccountAddresses());
-        StartCoroutine(GetAccountAddressesAssets());
+        //StartCoroutine(GetAccountAddresses());
+        //StartCoroutine(GetAccountAddressesAssets());
         StartCoroutine(GetAddressInfo());
-        StartCoroutine(GetAssetsList());
-        StartCoroutine(GetAssetInfo());
-        StartCoroutine(GetTransactionInfo());
+        //StartCoroutine(GetAssetsList());
+        //StartCoroutine(GetAssetInfo());
+        //StartCoroutine(GetTransactionInfo());
     }
 
     /// <summary>
@@ -409,6 +427,18 @@ public class BlockfrostIntegration : MonoBehaviour
     /// <param name="account">The Account object containing stake account details.</param>
     private void DisplayAccountInfo(Account account)
     {
+        stakeAddressText.text       = account.stake_address;
+        activeText.text            = account.active.ToString();
+        activeEpochText.text       = account.active_epoch.ToString();
+        controlledAmountText.text  = account.controlled_amount;
+        rewardsSumText.text        = account.rewards_sum;
+        withdrawalsSumText.text    = account.withdrawals_sum;
+        reservesSumText.text       = account.reserves_sum;
+        treasurySumText.text       = account.treasury_sum;
+        withdrawableAmountText.text = account.withdrawable_amount;
+        poolIdText.text            = account.pool_id;
+        drepIdText.text            = account.drep_id;
+
         Debug.Log("=== Stake Account Information ===");
         Debug.Log($"Stake Address: {account.stake_address}");
         Debug.Log($"Active: {account.active}");
@@ -453,19 +483,35 @@ public class BlockfrostIntegration : MonoBehaviour
     /// Displays the fetched address information in the console.
     /// </summary>
     /// <param name="addressInfo">The AddressInfo object containing address details.</param>
-    private void DisplayAddressInfo(AddressInfo addressInfo)
+private void DisplayAddressInfo(AddressInfo addressInfo)
+{
+    // Populate the TMP_InputField UI elements with fetched data
+    addressInfoAddress.text = addressInfo.address;
+
+    // Concatenate all amount details into a single string
+    string amountsStr = "";
+    foreach (var amt in addressInfo.amount)
     {
-        Debug.Log("=== Specific Address Information ===");
-        Debug.Log($"Address: {addressInfo.address}");
-        Debug.Log("Amounts:");
-        foreach (var amt in addressInfo.amount)
-        {
-            Debug.Log($"  Unit: {amt.unit}, Quantity: {amt.quantity}");
-        }
-        Debug.Log($"Stake Address: {addressInfo.stake_address}");
-        Debug.Log($"Type: {addressInfo.type}");
-        Debug.Log($"Script: {addressInfo.script}");
+        amountsStr += $"Unit: {amt.unit}, Quantity: {amt.quantity}\n";
     }
+    addressInfoAmounts.text = amountsStr;
+
+    addressInfoStakeAddress.text = addressInfo.stake_address;
+    addressInfoType.text = addressInfo.type;
+    addressInfoScript.text = addressInfo.script.ToString();
+
+    // Optional: Also log the information to the console
+    Debug.Log("=== Specific Address Information ===");
+    Debug.Log($"Address: {addressInfo.address}");
+    Debug.Log("Amounts:");
+    foreach (var amt in addressInfo.amount)
+    {
+        Debug.Log($"  Unit: {amt.unit}, Quantity: {amt.quantity}");
+    }
+    Debug.Log($"Stake Address: {addressInfo.stake_address}");
+    Debug.Log($"Type: {addressInfo.type}");
+    Debug.Log($"Script: {addressInfo.script}");
+}
 
     /// <summary>
     /// Displays the fetched assets list in the console.
