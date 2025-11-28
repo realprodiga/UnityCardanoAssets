@@ -16,9 +16,9 @@
 | &nbsp;&nbsp; 🔹 *API Method: Addresses* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Assets* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Asset.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Transactions* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Tx.png) |
-| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
+| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 Video (TimeStamp 1:25)](http://youtube.com/watch?v=xjHhKLWU6Zo&t=85) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
-| **3. Demonstration Video** | **PASS** | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
+| **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 0:00)](https://www.youtube.com/watch?v=xjHhKLWU6Zo) |
 | | | |
 | **📦 KOIOS INTEGRATION SCRIPT** | **PASS** | |
 | **1. Script Files** | **PASS** | [📄 KoiosIntegration.cs](CardanoSDK/Assets/Scripts/KoiosIntegration.cs) |
@@ -26,9 +26,9 @@
 | &nbsp;&nbsp; 🔹 *API Method: Address* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Asset* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Asset.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Transactions* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Tx.png) |
-| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
+| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 Video (TimeStamp 3:00)](http://youtube.com/watch?v=xjHhKLWU6Zo&t=180) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
-| **3. Demonstration Video** | **PASS** | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
+| **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 1:40)](https://www.youtube.com/watch?v=xjHhKLWU6Zo&t=160) |
 
 ---
 
