@@ -16,7 +16,7 @@
 | &nbsp;&nbsp; 🔹 *API Method: Addresses* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Assets* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Asset.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Transactions* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Tx.png) |
-| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING (Timestamp 0:45)](LINK_TO_YOUTUBE_VIDEO) |
+| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
 | **3. Demonstration Video** | **PASS** | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
 | | | |
@@ -26,7 +26,7 @@
 | &nbsp;&nbsp; 🔹 *API Method: Address* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Asset* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Asset.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Transactions* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Tx.png) |
-| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING (Timestamp 1:30)](LINK_TO_YOUTUBE_VIDEO) |
+| &nbsp;&nbsp; 🔧 *Framework for new endpoints* | ✅ | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
 | **3. Demonstration Video** | **PASS** | [🎬 PENDING](LINK_TO_YOUTUBE_VIDEO) |
 
