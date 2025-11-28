@@ -11,7 +11,7 @@
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
 | **BLOCKFROST INTEGRATION SCRIPT** | **PASS** | |
-| **1. Script Files** | **PASS** | [📄 BlockfrostIntegration.cs](Assets/Scripts/BlockfrostIntegration.cs) |
+| **1. Script Files** | **PASS** | [📄 BlockfrostIntegration.cs](CardanoSDK/Assets/Scripts/BlockfrostIntegration.cs) |
 | &nbsp;&nbsp; 🔹 *API Method: Accounts* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Account.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Addresses* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Assets* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Blockfrost_Asset.png) |
@@ -21,7 +21,7 @@
 | **3. Demonstration Video** | **PASS** | [🎬 Video Link](LINK_TO_YOUTUBE_VIDEO) |
 | | | |
 | **KOIOS INTEGRATION SCRIPT** | **PASS** | |
-| **1. Script Files** | **PASS** | [📄 KoiosIntegration.cs](Assets/Scripts/KoiosIntegration.cs) |
+| **1. Script Files** | **PASS** | [📄 KoiosIntegration.cs](CardanoSDK/Assets/Scripts/KoiosIntegration.cs) |
 | &nbsp;&nbsp; 🔹 *API Method: Stake Account* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Account.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Address* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Address.png) |
 | &nbsp;&nbsp; 🔹 *API Method: Asset* | ✅ | [🖼️ Screenshot](Documentation/Images/M1_Koios_Asset.png) |
