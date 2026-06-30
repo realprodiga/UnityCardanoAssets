@@ -1,0 +1,44 @@
+# Cardano SDK for Unity - Quickstart Guide
+
+This package provides the core integration for Cardano DApps in Unity WebGL.
+
+## 1. Import Instructions:
+1.  Create a new Unity project (or open an existing one).
+2.  Go to `Assets > Import Package > Custom Package...`
+3.  Select the `CardanoSDK_Milestone2.unitypackage` file.
+4.  Ensure all items are checked and click `Import`.
+5.  If prompted to "Import TMP Essentials," please click 'Import' to add TextMeshPro's core assets.
+
+## 2. WebGL Platform Setup:
+1.  Go to `File > Build Settings`.
+2.  Select `WebGL` and click `Switch Platform`. (If WebGL module is not installed, do so via Unity Hub).
+
+## 3. Critical Player Settings (IMPORTANT!):
+These settings are crucial for WebGL wallet compatibility and performance.
+1.  Go to `Edit > Project Settings > Player`.
+2.  Select the `WebGL` tab.
+3.  Expand `Publishing Settings`.
+4.  **Compression Format:** Set to `Disabled`. (Required for iOS Safari and some mobile wallets).
+5.  Expand `Resolution and Presentation`.
+6.  **WebGL Template:** Select `CardanoBasic` or `CardanoResponsive`.
+
+## 4. Scene Setup:
+1.  Open the demo scene: `Assets/CardanoSDK/Scenes/CardanoWebGL.unity`.
+2.  Ensure the `CardanoManager` GameObject is active in the Hierarchy.
+3.  Ensure the `StatusPanel` and `StatusText` UI elements are correctly set up and linked to the `CardanoManager` script's "Status Text" slot. (These should be correctly imported with the scene, but verify).
+
+## 5. Building and Testing:
+1.  You cannot run WebGL builds directly from the file system (file://). You need a local web server.
+2.  Go to `File > Build Settings`.
+3.  Click `Build`. Choose a folder (e.g., `Builds/Demo`).
+4.  Open a terminal/command prompt in your build folder.
+5.  Run a local HTTP server: `python -m http.server 8000` (requires Python installed).
+6.  Open your browser to `http://localhost:8000`.
+7.  Click "Connect Wallet" and interact with your Cardano browser wallet (e.g., Nami, Eternl).
+
+## 6. Mobile Testing (HTTPS Required):
+For testing on mobile wallets (like Eternl Mobile), you will need to use a tunneling service like ngrok to create a secure HTTPS link to your local server.
+1.  Ensure your Python server is running (`python -m http.server 8000`).
+2.  In a **separate** terminal, run `ngrok http 8000`.
+3.  Copy the `https://` URL provided by ngrok.
+4.  Paste this URL into your mobile wallet's DApp browser.

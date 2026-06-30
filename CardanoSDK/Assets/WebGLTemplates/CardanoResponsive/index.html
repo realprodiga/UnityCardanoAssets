@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>{{{ PRODUCT_NAME }}}</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div id="header-bar">
+        <span>{{{ PRODUCT_NAME }}}</span>
+        <button id="connect-btn" onclick="toggleWallet()">Connect Wallet</button>
+    </div>
+
+    <div id="canvas-container">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      var container = document.querySelector("#canvas-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var myGameInstance = null;
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
+      var config = {
+        dataUrl: buildUrl + "/{{{ DATA_FILENAME }}}",
+        frameworkUrl: buildUrl + "/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: buildUrl + "/{{{ CODE_FILENAME }}}",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+      };
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          // Loading bar logic could go here
+        }).then((unityInstance) => {
+          myGameInstance = unityInstance;
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

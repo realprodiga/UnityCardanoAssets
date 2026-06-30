@@ -12,25 +12,27 @@ public class WalletDisplay : MonoBehaviour
 
     void Update()
     {
-        // Check if the Account data is loaded
-        if (BlockfrostManager != null && BlockfrostManager.CurrentAccount != null)
+        // Check if we are disconnected (using the address as the source of truth)
+        if (BlockfrostManager == null || string.IsNullOrEmpty(BlockfrostManager.AddressToFetch))
         {
-            // 1. Get raw Lovelace (string)
-            string rawAmount = BlockfrostManager.CurrentAccount.ControlledAmount;
+            BalanceText.text = "0 ₳";
+            return;
+        }
 
-            // 2. Convert to ADA (Game Logic)
+        // Only update if we have a valid stake address string
+        if (BlockfrostManager.CurrentAccount != null)
+        {
+            string rawAmount = BlockfrostManager.CurrentAccount.ControlledAmount;
+            
             if (long.TryParse(rawAmount, out long lovelace))
             {
                 double ada = lovelace / 1000000.0;
-                BalanceText.text = $"{ada:N2} ₳"; // Format as "1,234.56 ₳"
+                BalanceText.text = $"{ada:N2} ₳";
             }
             else
             {
                 BalanceText.text = "0 ₳";
             }
-
-            // 3. Update Status
-            bool isActive = BlockfrostManager.CurrentAccount.Active;
         }
     }
 }

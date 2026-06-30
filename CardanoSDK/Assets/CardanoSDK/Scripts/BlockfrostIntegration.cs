@@ -62,10 +62,10 @@ public class BlockfrostIntegration : MonoBehaviour
     /*
     private IEnumerator Fetch____()
     {
+        if (string.IsNullOrEmpty(____ToFetch)) yield break;
         string url = $"{MainnetUrl}/____";
         UnityWebRequest request = CreateRequest(url);
         yield return request.SendWebRequest();
-
         if (request.result == UnityWebRequest.Result.Success)
         {
             var info = JsonUtility.FromJson<Blockfrost____Raw>(request.downloadHandler.text);
@@ -74,12 +74,14 @@ public class BlockfrostIntegration : MonoBehaviour
         }
     }
     */
+
     private IEnumerator FetchAccount()
     {
+        if (string.IsNullOrEmpty(StakeAddressToFetch)) yield break;
+
         string url = $"{MainnetUrl}/accounts/{StakeAddressToFetch}";
         UnityWebRequest request = CreateRequest(url);
         yield return request.SendWebRequest();
-
         if (request.result == UnityWebRequest.Result.Success)
         {
             var info = JsonUtility.FromJson<BlockfrostAccountRaw>(request.downloadHandler.text);
@@ -91,10 +93,11 @@ public class BlockfrostIntegration : MonoBehaviour
 
     private IEnumerator FetchAddress()
     {
+        if (string.IsNullOrEmpty(AddressToFetch)) yield break;
+
         string url = $"{MainnetUrl}/addresses/{AddressToFetch}";
         UnityWebRequest request = CreateRequest(url);
         yield return request.SendWebRequest();
-
         if (request.result == UnityWebRequest.Result.Success)
         {
             var info = JsonUtility.FromJson<BlockfrostAddressRaw>(request.downloadHandler.text);
@@ -105,10 +108,11 @@ public class BlockfrostIntegration : MonoBehaviour
 
     private IEnumerator FetchAssetDetails()
     {
+        if (string.IsNullOrEmpty(AssetIdToFetch)) yield break;
+
         string url = $"{MainnetUrl}/assets/{AssetIdToFetch}";
         UnityWebRequest request = CreateRequest(url);
         yield return request.SendWebRequest();
-
         if (request.result == UnityWebRequest.Result.Success)
         {
             var info = JsonUtility.FromJson<BlockfrostAssetRaw>(request.downloadHandler.text);
@@ -121,10 +125,11 @@ public class BlockfrostIntegration : MonoBehaviour
 
     private IEnumerator FetchTransaction()
     {
+        if (string.IsNullOrEmpty(TxHashToFetch)) yield break;
+
         string url = $"{MainnetUrl}/txs/{TxHashToFetch}";
         UnityWebRequest request = CreateRequest(url);
         yield return request.SendWebRequest();
-
         if (request.result == UnityWebRequest.Result.Success)
         {
             var info = JsonUtility.FromJson<BlockfrostTxRaw>(request.downloadHandler.text);
@@ -136,8 +141,6 @@ public class BlockfrostIntegration : MonoBehaviour
 
     private void OnEnable()
     {
-        if (string.IsNullOrEmpty(ProjectId)) return;
-
         // [FRAMEWORK STEP 5: Initialize new data classes here]
         //Current____ = new Blockfrost____Data();
         CurrentAccount = new BlockfrostAccountData();
@@ -145,8 +148,15 @@ public class BlockfrostIntegration : MonoBehaviour
         CurrentAssetDetails = new BlockfrostAssetDetails();
         CurrentTransaction = new BlockfrostTxData();
         
-        StopAllCoroutines();
+        RefreshData();
+    }
 
+    public void RefreshData()
+    {
+        if (string.IsNullOrEmpty(ProjectId)) return;
+        
+        StopAllCoroutines();
+        
         // [FRAMEWORK STEP 6: Start new Coroutines here]
         //StartCoroutine(Fetch____())
         StartCoroutine(FetchAccount());
@@ -155,4 +165,17 @@ public class BlockfrostIntegration : MonoBehaviour
         StartCoroutine(FetchTransaction());
     }
 
+    public void ClearData()
+    {
+        StopAllCoroutines();
+        CurrentAccount = new BlockfrostAccountData();
+        CurrentAddress = new BlockfrostAddressData();
+        CurrentAssetDetails = new BlockfrostAssetDetails();
+        CurrentTransaction = new BlockfrostTxData();
+        
+        StakeAddressToFetch = "";
+        AddressToFetch = "";
+        AssetIdToFetch = "";
+        TxHashToFetch = "";
+    }
 }

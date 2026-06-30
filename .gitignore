@@ -1,3 +1,4 @@
+# Unity Folders to Ignore
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -5,8 +6,29 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+/[Aa]rtifacts/
+/[Vv]R/
+/[Uu]serSettings/
+
+# Asset Store Packages (Can be re-downloaded, keeps repo light)
+/[Aa]ssets/[Aa]ssetStoreTools*
+
+# Visual Studio / Rider / VS Code files
 .vs/
 .idea/
+.vscode/
 *.csproj
 *.sln
+*.suo
 *.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# OS Files
+.DS_Store
+Thumbs.db

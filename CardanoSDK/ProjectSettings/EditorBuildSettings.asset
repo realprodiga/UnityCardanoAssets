@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/CardanoSDK/Scenes/CardanoWebGL.unity
+    guid: 8ad07f21762b590438289cce01f8a13b
   m_configObjects: {}
