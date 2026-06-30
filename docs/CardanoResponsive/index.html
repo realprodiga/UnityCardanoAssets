@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>CardanoGameDevelopmentSDK</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div id="header-bar">
+        <span>CardanoGameDevelopmentSDK</span>
+        <button id="connect-btn" onclick="toggleWallet()">Connect Wallet</button>
+    </div>
+
+    <div id="canvas-container">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+      var container = document.querySelector("#canvas-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var myGameInstance = null;
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/CardanoResponsive.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/CardanoResponsive.data",
+        frameworkUrl: buildUrl + "/CardanoResponsive.framework.js",
+        codeUrl: buildUrl + "/CardanoResponsive.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "prodiga",
+        productName: "CardanoGameDevelopmentSDK",
+        productVersion: "0.1",
+      };
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          // Loading bar logic could go here
+        }).then((unityInstance) => {
+          myGameInstance = unityInstance;
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>

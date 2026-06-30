@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | CardanoGameDevelopmentSDK</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f0f0f0; }
+        #unity-container { width: 960px; height: 600px; margin: auto; background: black; }
+        #wallet-controls { margin-top: 20px; padding: 10px; background: white; border: 1px solid #ccc; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #0033ad; color: white; border: none; border-radius: 4px;}
+        button:hover { background-color: #002280; }
+    </style>
+  </head>
+  <body>
+    <h1>CardanoGameDevelopmentSDK</h1>
+    
+    <div id="unity-container">
+      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HTML Wallet Connect Section -->
+    <div id="wallet-controls">
+        <h3>Wallet Integration</h3>
+        <p>Connect your Cardano wallet to interact with the Unity Scene.</p>
+        <button id="btn-connect" onclick="triggerUnityConnect()">Connect Wallet</button>
+        <p id="wallet-status">Status: Disconnected</p>
+    </div>
+
+    <script>
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/CardanoBasic.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/CardanoBasic.data",
+        frameworkUrl: buildUrl + "/CardanoBasic.framework.js",
+        codeUrl: buildUrl + "/CardanoBasic.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "prodiga",
+        productName: "CardanoGameDevelopmentSDK",
+        productVersion: "0.1",
+      };
+
+      var canvas = document.querySelector("#unity-canvas");
+      var myGameInstance = null;
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          document.querySelector("#unity-progress-bar-full").style.width = 100 * progress + "%";
+        }).then((unityInstance) => {
+          myGameInstance = unityInstance;
+          document.querySelector("#unity-loading-bar").style.display = "none";
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+
+      // Function called by HTML Button
+      function triggerUnityConnect() {
+          if(myGameInstance == null) {
+              alert("Unity is still loading...");
+              return;
+          }
+          
+          document.getElementById("wallet-status").innerText = "Status: Check Wallet Popup...";
+          
+          // Send message to "CardanoManager" GameObject, method "RequestConnection"
+          myGameInstance.SendMessage("CardanoManager", "RequestConnection");
+      }
+    </script>
+  </body>
+</html>
