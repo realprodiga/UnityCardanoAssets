@@ -34,7 +34,7 @@
 | **1. WebGL Template Files** | **PASS** | [📁 CardanoBasic/](CardanoSDK/Assets/WebGLTemplates/CardanoBasic) |
 | &nbsp;&nbsp; 🔹 HTML page with Unity Player | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoBasic_Disconnected.png) |
 | &nbsp;&nbsp; 🔹 Wallet Connect Button | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoBasic_WalletPopup.png) |
-| &nbsp;&nbsp; 🔹 Displays Wallet Balance (via Blockfrost) | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoBasic_Connected.png) |
+| &nbsp;&nbsp; 🔹 Displays Wallet Balance | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoBasic_Connected.png) |
 | &nbsp;&nbsp; 🔗 Live Demo | ✅ | [🌐 realprodiga.github.io/.../CardanoBasic](https://realprodiga.github.io/UnityCardanoAssets/CardanoBasic/) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
 | **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 0:45)](VIDEO_URL_PLACEHOLDER) |
@@ -43,7 +43,7 @@
 | **1. WebGL Template Files** | **PASS** | [📁 CardanoResponsive/](CardanoSDK/Assets/WebGLTemplates/CardanoResponsive) |
 | &nbsp;&nbsp; 🔹 Mobile-first HTML/CSS/JS | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoResponsive_Mobile.png) |
 | &nbsp;&nbsp; 🔹 Adapts to screen sizes | ✅ | [🖼️ Desktop](Documentation/Images/M2_CardanoResponsive_Desktop.png) · [Tablet](Documentation/Images/M2_CardanoResponsive_Tablet.png) · [Mobile](Documentation/Images/M2_CardanoResponsive_Mobile.png) |
-| &nbsp;&nbsp; 🔹 Displays Wallet Balance (via Blockfrost) | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoResponsive_Connected.png) |
+| &nbsp;&nbsp; 🔹 Displays Wallet Balance | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoResponsive_Connected.png) |
 | &nbsp;&nbsp; 🔗 Live Demo | ✅ | [🌐 realprodiga.github.io/.../CardanoResponsive](https://realprodiga.github.io/UnityCardanoAssets/CardanoResponsive/) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
 | **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 1:45)](VIDEO_URL_PLACEHOLDER) |
