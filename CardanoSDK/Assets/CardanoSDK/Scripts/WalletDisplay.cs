@@ -4,35 +4,43 @@ using TMPro; // Standard Unity Text
 public class WalletDisplay : MonoBehaviour
 {
     [Header("SDK Reference")]
+    [Tooltip("If both providers are assigned, Blockfrost is used as the primary source and Koios is used as a fallback.")]
     public BlockfrostIntegration BlockfrostManager;
-    // You could add public KoiosIntegration KoiosManager; here too
+    public KoiosIntegration KoiosManager;
 
     [Header("Game UI")]
     public TextMeshProUGUI BalanceText;
 
     void Update()
     {
-        // Check if we are disconnected (using the address as the source of truth)
-        if (BlockfrostManager == null || string.IsNullOrEmpty(BlockfrostManager.AddressToFetch))
+        // Prefer Blockfrost if it's wired up and actively tracking a connected address
+        if (BlockfrostManager != null && !string.IsNullOrEmpty(BlockfrostManager.AddressToFetch))
         {
-            BalanceText.text = "0 ₳";
+            SetBalanceFromLovelace(BlockfrostManager.CurrentAccount?.ControlledAmount);
             return;
         }
 
-        // Only update if we have a valid stake address string
-        if (BlockfrostManager.CurrentAccount != null)
+        // Fall back to Koios if it's wired up and actively tracking a connected address
+        if (KoiosManager != null && !string.IsNullOrEmpty(KoiosManager.AddressToFetch))
         {
-            string rawAmount = BlockfrostManager.CurrentAccount.ControlledAmount;
-            
-            if (long.TryParse(rawAmount, out long lovelace))
-            {
-                double ada = lovelace / 1000000.0;
-                BalanceText.text = $"{ada:N2} ₳";
-            }
-            else
-            {
-                BalanceText.text = "0 ₳";
-            }
+            SetBalanceFromLovelace(KoiosManager.CurrentAccount?.TotalBalance);
+            return;
+        }
+
+        // Neither provider is connected
+        BalanceText.text = "0 ₳";
+    }
+
+    private void SetBalanceFromLovelace(string rawLovelaceAmount)
+    {
+        if (long.TryParse(rawLovelaceAmount, out long lovelace))
+        {
+            double ada = lovelace / 1000000.0;
+            BalanceText.text = $"{ada:N2} ₳";
+        }
+        else
+        {
+            BalanceText.text = "0 ₳";
         }
     }
 }
