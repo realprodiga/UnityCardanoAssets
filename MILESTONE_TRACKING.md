@@ -37,7 +37,7 @@
 | &nbsp;&nbsp; 🔹 Displays Wallet Balance | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoBasic_Connected.png) |
 | &nbsp;&nbsp; 🔗 Live Demo | ✅ | [🌐 realprodiga.github.io/.../CardanoBasic](https://realprodiga.github.io/UnityCardanoAssets/CardanoBasic/) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
-| **3. Demonstration Video** | ⬜ | PENDING) |
+| **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 2:12)](https://www.youtube.com/watch?v=mjsagi8YZE0&t=132) |
 | | | |
 | **📦 "CARDANO RESPONSIVE" TEMPLATE** | **PASS** | |
 | **1. WebGL Template Files** | **PASS** | [📁 CardanoResponsive/](CardanoSDK/Assets/WebGLTemplates/CardanoResponsive) |
@@ -46,7 +46,7 @@
 | &nbsp;&nbsp; 🔹 Displays Wallet Balance | ✅ | [🖼️ Screenshot](Documentation/Images/M2_CardanoResponsive_Connected.png) |
 | &nbsp;&nbsp; 🔗 Live Demo | ✅ | [🌐 realprodiga.github.io/.../CardanoResponsive](https://realprodiga.github.io/UnityCardanoAssets/CardanoResponsive/) |
 | **2. Trackable Spreadsheet** | **PASS** | [📊 Link to this Document](MILESTONE_TRACKING.md) |
-| **3. Demonstration Video** | ⬜  | PENDING |
+| **3. Demonstration Video** | **PASS** | [🎬 Video (TimeStamp 2:27)](https://www.youtube.com/watch?v=mjsagi8YZE0&t=147) |
 ---
 ## ⏳ Milestone 3: Unity Sample dApps
 **Status:** PENDING  
