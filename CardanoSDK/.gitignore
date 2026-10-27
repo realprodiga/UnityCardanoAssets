@@ -1,0 +1,9 @@
+Assets/CardanoSDK/MintingWalletSecret.asset
+Assets/CardanoSDK/TreasuryWalletSecret.asset
+Assets/_CardanoSDK_LocalSecrets/
+Assets/_CardanoSDK_LocalSecrets.meta
+.claude-tmp/
+PackageExports/
+UserSettings/
+.vscode/
+ProjectContextForAI.txt

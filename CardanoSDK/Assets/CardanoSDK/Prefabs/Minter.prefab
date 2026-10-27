@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8342445453205301735
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3492137667979425432}
+  - component: {fileID: 3973354012942530494}
+  m_Layer: 0
+  m_Name: Minter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3492137667979425432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342445453205301735}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3973354012942530494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8342445453205301735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a8fa38b03d919643b5dd744e267f6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockfrostManager: {fileID: 0}
+  KoiosManager: {fileID: 0}
+  WalletSecret: {fileID: 11400000, guid: 4c887097d7c369e47aa68cc481da661f, type: 2}
+  Token:
+    TokenType: 0
+    AssetName: AchievementBadge
+    EnforceUniqueness: 0
+    Quantity: 1
+    DisplayName: Achievement Badge
+    ImageUri: ipfs://REPLACE_WITH_YOUR_IMAGE_CID
+    ImageMediaType: image/png
+    Description: Awarded for completing the tutorial quest.
+    Attributes:
+    - Key: Rarity
+      Value: Common
+  Policy:
+    ExpirySlot: 0
+  Sponsorship:
+    AllowSponsorship: 0
+    MinimumRemainingLovelace: 5000000
+    Conditions:
+    - Conditions:
+      - PolicyId: 
+        AssetNameHex: 
+        ConditionType: 0
+        UseMinQuantity: 1
+        MinQuantity: 1
+        UseMaxQuantity: 0
+        MaxQuantity: 9223372036854775807
+        MetadataKey: 
+        MetadataValue: 
+        Invert: 1
+  StatusText: {fileID: 0}
+  TxHashField: {fileID: 0}
+  TxHashRow: {fileID: 0}
+  OnMintSucceeded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMintFailed:
+    m_PersistentCalls:
+      m_Calls: []

@@ -17,6 +17,13 @@ mergeInto(LibraryManager.library, {
           window._cardanoAccountPollInterval = null;
       }
 
+      // Also drop the cached wallet API reference and key on disconnect, so nothing stale
+      // (e.g. the minting bridge) can reuse a revoked session after the wallet's gone.
+      if (btnText === "Connect Wallet") {
+          window._connectedWalletApi = null;
+          window._selectedCardanoWalletKey = null;
+      }
+
       var btn = document.getElementById("connect-btn") || document.getElementById("btn-connect");
       if (btn) btn.innerText = btnText;
 
@@ -102,6 +109,7 @@ mergeInto(LibraryManager.library, {
                 try {
                     var reconnected = await tryConnect(selectedWallet);
                     currentApi = reconnected.api;
+                    window._connectedWalletApi = reconnected.api;
                     window._cardanoCurrentWalletData = reconnected.data;
                     updateUI("Disconnect", "Account Updated");
                     window.myGameInstance.SendMessage(objectName, methodName, reconnected.data);
@@ -109,6 +117,7 @@ mergeInto(LibraryManager.library, {
                     // Re-enable also failed: wallet is locked or truly disconnected.
                     clearInterval(window._cardanoAccountPollInterval);
                     window._cardanoAccountPollInterval = null;
+                    window._connectedWalletApi = null;
                     updateUI("Connect Wallet", "Wallet Disconnected");
                     window.myGameInstance.SendMessage(objectName, methodName, "ERROR: Wallet Disconnected");
                 }
@@ -119,6 +128,13 @@ mergeInto(LibraryManager.library, {
     try {
         var connected = await tryConnect(selectedWallet);
         window._cardanoCurrentWalletData = connected.data;
+
+        // Cache the live CIP-30 API object AND which wallet key was used, so other bridge calls
+        // (e.g. the minting flow's player-pays path, which needs the player's own wallet to sign
+        // via Mesh's BrowserWallet.enable()) can reconnect to the same wallet without a fresh
+        // connect prompt.
+        window._connectedWalletApi = connected.api;
+        window._selectedCardanoWalletKey = selectedWallet;
 
         updateUI("Disconnect", "Connected");
         window.myGameInstance.SendMessage(objectName, methodName, connected.data);

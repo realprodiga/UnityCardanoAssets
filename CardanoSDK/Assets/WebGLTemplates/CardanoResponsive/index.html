@@ -18,6 +18,10 @@
       <canvas id="unity-canvas"></canvas>
     </div>
 
+    <!-- Mesh SDK bundle: local copy if present (GitHub release), otherwise the pinned, integrity-checked copy on jsDelivr
+         (the Asset Store package ships without it -- see Third-Party Notices.txt). -->
+    <script src="cardano-mint-sdk.bundle.js"></script>
+    <script>window.CardanoMintSDK || document.write('<script src="https://cdn.jsdelivr.net/gh/realprodiga/UnityCardanoAssets@v1.0.0/CardanoSDK/Assets/CardanoSDK/WebGLTemplates/CardanoBasic/cardano-mint-sdk.bundle.js" integrity="sha384-PExqHCvhUNBdg5kkLp3IZS1ueB4GgtwVyxhdDD2WhOqXKqlIEeX8n16HFYeWJSkc" crossorigin="anonymous"><\/script>');</script>
     <script src="script.js"></script>
 
     <script>

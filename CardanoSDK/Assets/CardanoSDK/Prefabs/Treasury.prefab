@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3353500256658708744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4539503656294378572}
+  - component: {fileID: 6107558417542308108}
+  m_Layer: 0
+  m_Name: Treasury
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4539503656294378572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353500256658708744}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6107558417542308108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353500256658708744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73121cb2ce1d8594490029ca3a210736, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockfrostManager: {fileID: 0}
+  KoiosManager: {fileID: 0}
+  TreasuryWalletSecret: {fileID: 11400000, guid: 7d9756c4234ccc2498e633dc468cfe4b, type: 2}
+  Token:
+    PolicyId: 279c909f348e533da5808898f87f9a14bb2c3dfbbacccd631d927a3f
+    AssetNameHex: 534e454b
+    QuantityPerAward: 100
+    DisplayName: SNEK
+  Sponsorship:
+    AllowSponsorship: 0
+    MinimumRemainingLovelace: 5000000
+    Conditions: []
+  StatusText: {fileID: 0}
+  TxHashField: {fileID: 0}
+  TxHashRow: {fileID: 0}
+  OnAwardSucceeded:
+    m_PersistentCalls:
+      m_Calls: []
+  OnAwardFailed:
+    m_PersistentCalls:
+      m_Calls: []

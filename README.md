@@ -15,16 +15,25 @@ Developed with support from **Project Catalyst Fund 12**, this SDK provides ligh
 *   **🛠️ Data-Oriented Inspector:** View Blockchain data (ADA Balance, Assets, Transactions) directly in the Unity Inspector for easy debugging.
 *   **📝 Extensible Framework:** Both integration scripts include a commented, 6-step framework allowing you to easily add new API endpoints.
 *   **📱 Lightweight:** No external DLLs or heavy plugins. Just pure C# `UnityWebRequest`.
+*   **🌐 WebGL Templates:** `CardanoBasic` and mobile-first `CardanoResponsive` templates with CIP-30 wallet connection and balance display.
+*   **🚪 Gated Access:** Open in-game barriers only for wallets holding specific NFTs/tokens (AND/OR/NOT rules, quantity ranges, metadata matching).
+*   **🪙 Minting Tokens:** Mint CIP-25 NFTs or fungible tokens to players from game events, with optional fee sponsorship.
+*   **🎁 Awarding Tokens:** Send existing tokens from a treasury wallet to players from game events.
+*   **🧰 Editor Tools:** Project-settings checker, wallet setup window and one-click demo scene builders under `Tools > Cardano SDK`.
+
+📘 **Full documentation:** [CardanoSDK_Documentation.md](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md)
 
 ---
 
 ## 📥 Installation
 
-1.  **Download:**
-    *   Clone this repository or [Download ZIP](https://github.com/realprodiga/UnityCardanoAssets/archive/refs/heads/main.zip).
-2.  **Import:**
-    *   Copy the `Assets/Scripts` folder from this repo into your Unity Project's `Assets` folder.
-    *   *(Optional)* Copy `Assets/Scenes` if you want to see the example setup.
+*   **Unity Asset Store:** search for **Cardano Game Development SDK** (free), then import it from *Package Manager > My Assets*.
+*   **GitHub release:** download `CardanoSDK_v1.0.0.unitypackage` from [Releases](https://github.com/realprodiga/UnityCardanoAssets/releases) and use *Assets > Import Package > Custom Package...*.
+*   **From source:** clone this repository and copy `CardanoSDK/Assets/CardanoSDK` into your project's `Assets` folder.
+
+Then run **Tools > Cardano SDK > Check Project Settings** to install the WebGL templates and apply the required WebGL settings. Everything lives under `Assets/CardanoSDK` in the `Prodiga.CardanoSDK` namespace.
+
+> 🔐 **Never commit secrets.** Wallet secrets created with *Tools > Cardano SDK > Wallet Setup* are saved to `Assets/_CardanoSDK_LocalSecrets/` (git-ignored), and the shipped prefabs and scenes contain no Blockfrost project ID. Use the **preprod** testnet and a dedicated, low-value wallet for minting and awarding. See the documentation's security section.
 
 ---
 
@@ -108,13 +117,13 @@ Create a slot for your data class so it appears in the Unity Inspector. We'll na
 
 #### [Step 4] Write the Fetch Function
 This is the worker function. It goes to the URL, gets the raw data, and moves it into your clean data class.
-*   **The URL:** We see in the docs the endpoint is `/epochs/latest`. We append that to our `MainnetUrl`.
+*   **The URL:** We see in the docs the endpoint is `/epochs/latest`. We append that to our `BaseUrl`.
 
     // [FRAMEWORK STEP 4: Implement new Coroutines here]
     private IEnumerator FetchEpoch()
     {
         // Build the specific URL based on the documentation
-        string url = $"{MainnetUrl}/epochs/latest";         
+        string url = $"{BaseUrl}/epochs/latest";         
         
         // Create the authorized request
         UnityWebRequest request = CreateRequest(url); 
@@ -153,9 +162,15 @@ Finally, scroll down to the `OnEnable()` function. We need to make sure the clas
 ## 🗺️ Roadmap (Fund 12)
 
 *   ✅ **Milestone 1:** Core Integration Scripts (Blockfrost & Koios)
-*   ⬜ **Milestone 2:** Unity WebGL Templates (Wallet Connection & Responsive Design)
-*   ⬜ **Milestone 3:** Sample dApps (Gated Access, Minting, Token Awards)
-*   ⬜ **Milestone 4:** Unity Asset Store Publication
+*   ✅ **Milestone 2:** Unity WebGL Templates (Wallet Connection & Responsive Design)
+*   ✅ **Milestone 3:** Sample dApps (Gated Access, Minting, Token Awards)
+*   🟡 **Milestone 4:** Unity Asset Store Publication
+
+Detailed status and evidence: [MILESTONE_TRACKING.md](MILESTONE_TRACKING.md)
+
+## 📦 Third-Party Components
+
+The Minting and Awarding features use `cardano-mint-sdk.bundle.js`, an unmodified build of [MeshJS](https://github.com/MeshJS/mesh) and its dependencies (Apache-2.0, MIT, ISC, BSD and MPL-2.0 licensed). The full license list and texts are in [`cardano-mint-sdk.bundle.LICENSES.txt`](CardanoSDK/Assets/CardanoSDK/WebGLTemplates/CardanoBasic/cardano-mint-sdk.bundle.LICENSES.txt).
 
 ---
 

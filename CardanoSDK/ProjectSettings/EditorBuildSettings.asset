@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/CardanoSDK/Scenes/CardanoWebGL.unity
+  - enabled: 0
+    path: Assets/CardanoSDK/Demo/Scenes/CardanoWebGL.unity
     guid: 8ad07f21762b590438289cce01f8a13b
+  - enabled: 0
+    path: Assets/CardanoSDK/Demo/Scenes/GatedAccess.unity
+    guid: c234e3abc7c3eee439b91739d4feb3ec
+  - enabled: 1
+    path: Assets/CardanoSDK/Demo/Scenes/MintingTokens.unity
+    guid: 99cb8b609afeb094e89bf1ad1c8bcad0
+  - enabled: 0
+    path: Assets/CardanoSDK/Demo/Scenes/AwardingTokens.unity
+    guid: cf4ccf5d32ad5274d8b3c97f2d764a01
   m_configObjects: {}

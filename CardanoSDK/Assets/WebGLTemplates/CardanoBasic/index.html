@@ -32,6 +32,10 @@
         <p id="wallet-status">Status: Disconnected</p>
     </div>
 
+    <!-- Mesh SDK bundle: local copy if present (GitHub release), otherwise the pinned, integrity-checked copy on jsDelivr
+         (the Asset Store package ships without it -- see Third-Party Notices.txt). -->
+    <script src="cardano-mint-sdk.bundle.js"></script>
+    <script>window.CardanoMintSDK || document.write('<script src="https://cdn.jsdelivr.net/gh/realprodiga/UnityCardanoAssets@v1.0.0/CardanoSDK/Assets/CardanoSDK/WebGLTemplates/CardanoBasic/cardano-mint-sdk.bundle.js" integrity="sha384-PExqHCvhUNBdg5kkLp3IZS1ueB4GgtwVyxhdDD2WhOqXKqlIEeX8n16HFYeWJSkc" crossorigin="anonymous"><\/script>');</script>
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/{{{ LOADER_FILENAME }}}";
@@ -64,6 +68,13 @@
 
       // Function called by HTML Button
       function triggerUnityConnect() {
+          // Blur immediately so the button doesn't keep keyboard focus after the click --
+          // otherwise, with no other page element clicked afterward, a Space press meant for
+          // the Unity jump input is also interpreted by the browser as "activate this button"
+          // and silently re-triggers Connect/Disconnect.
+          var connectButton = document.getElementById("btn-connect");
+          if (connectButton) connectButton.blur();
+
           if(myGameInstance == null) {
               alert("Unity is still loading...");
               return;

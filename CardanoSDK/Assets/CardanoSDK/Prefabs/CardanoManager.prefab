@@ -1,0 +1,200 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2396153685288103909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3596455184847598206}
+  - component: {fileID: 2908220338411911188}
+  - component: {fileID: 4606454940177375197}
+  m_Layer: 0
+  m_Name: CardanoManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3596455184847598206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396153685288103909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3005271747882929959}
+  - {fileID: 5356734520976808745}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2908220338411911188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396153685288103909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a88e3ada45211b41be59cc5ae4f2382, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockfrostProvider: {fileID: 8665477843959600309}
+  koiosProvider: {fileID: 4008895598429693835}
+  statusText: {fileID: 0}
+--- !u!114 &4606454940177375197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2396153685288103909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f6cc09f655aea4c9b7329487e91ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockfrostManager: {fileID: 8665477843959600309}
+  KoiosManager: {fileID: 4008895598429693835}
+  BalanceText: {fileID: 0}
+--- !u!1 &7430582292954739926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3005271747882929959}
+  - component: {fileID: 8665477843959600309}
+  m_Layer: 0
+  m_Name: BlockfrostManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3005271747882929959
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430582292954739926}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3596455184847598206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8665477843959600309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430582292954739926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edfaee7c3bce7044b09c04362a19861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProjectId: 
+  StakeAddressToFetch: 
+  AddressToFetch: 
+  AssetIdToFetch: 
+  TxHashToFetch: 
+  CurrentAccount:
+    StakeAddress: 
+    Active: 0
+    ControlledAmount: 
+  CurrentAddress:
+    Address: 
+    Type: 
+    Assets: []
+  CurrentAssetDetails:
+    AssetNameAscii: 
+    AssetNameHex: 
+    AssetId: 
+    Quantity: 
+  CurrentTransaction:
+    Hash: 
+    Fees: 
+    BlockHeight: 0
+--- !u!1 &8499572670861514913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5356734520976808745}
+  - component: {fileID: 4008895598429693835}
+  m_Layer: 0
+  m_Name: KoiosManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5356734520976808745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499572670861514913}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3596455184847598206}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4008895598429693835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8499572670861514913}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29f0550272d622a46a3ba3975305509d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BaseUrl: https://api.koios.rest/api/v1
+  StakeAddressToFetch: 
+  AddressToFetch: 
+  AssetPolicyToFetch: 
+  AssetNameHexToFetch: 
+  TxHashToFetch: 
+  CurrentAccount:
+    StakeAddress: 
+    Status: 
+    TotalBalance: 
+  CurrentAddress:
+    Address: 
+    Type: 
+    Assets: []
+  CurrentAssetInfo:
+    AssetNameAscii: 
+    AssetNameHex: 
+    PolicyId: 
+    TotalSupply: 
+  CurrentTransaction:
+    TxHash: 
+    Fee: 
+    BlockHeight: 0

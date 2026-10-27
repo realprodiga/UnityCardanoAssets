@@ -1,0 +1,24 @@
+Third-Party Notices -- Cardano Game Development SDK for Unity
+==============================================================
+
+This asset is governed by the Unity Asset Store EULA. Components that carry their own licenses are listed below.
+
+1. Unity packages (dependencies, not included in this package)
+   - TextMeshPro (com.unity.textmeshpro), uGUI (com.unity.ugui), Newtonsoft Json (com.unity.nuget.newtonsoft-json)
+     Licensed under the Unity Companion License / their package licenses, installed through the Unity Package Manager.
+
+2. Mesh SDK bundle (cardano-mint-sdk.bundle.js) -- NOT included in this package, loaded at runtime
+   - The Minting and Awarding features use an unmodified esbuild bundle of MeshJS (@meshsdk/core 1.9.1,
+     https://github.com/MeshJS/mesh) and its dependencies. The WebGL templates load it at runtime from
+     https://cdn.jsdelivr.net/gh/realprodiga/UnityCardanoAssets@v1.0.0/ (pinned, Subresource Integrity checked),
+     or from a local copy you add yourself.
+   - The bundle contains open-source packages under these licenses: Apache-2.0 (incl. @meshsdk/*, @cardano-sdk/*,
+     @harmoniclabs/*), MIT, ISC, BSD-2-Clause, BSD-3-Clause, 0BSD and MPL-2.0 (@cardano-ogmios/*, webextension-polyfill).
+     fraction.js is dual-licensed "MIT OR GPL-2.0" and is used under MIT.
+   - The full package list with every license text and NOTICE file is published next to the bundle as
+     cardano-mint-sdk.bundle.LICENSES.txt:
+     https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0
+
+3. External web services used at runtime (not software included in this package)
+   - Blockfrost (https://blockfrost.io): requires your own account and project ID; Blockfrost's terms apply.
+   - Koios (https://koios.rest): public community API; Koios's terms apply.
