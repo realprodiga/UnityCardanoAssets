@@ -56,6 +56,43 @@ public static class CardanoSDKPackageExporter
         EditorUtility.RevealInFinder(Path.GetFullPath(githubPath));
     }
 
+    // The Asset Store Uploader ("From Assets Folder") exports the whole folder and cannot exclude files,
+    // so the Mesh bundle is parked outside Assets/ for the upload. Moving each .meta with its file keeps GUIDs.
+    private const string HoldoutDir = OutDir + "/_AssetStoreHoldout";
+
+    [MenuItem("Tools/Cardano SDK/Publisher/1. Hide Mesh Bundle For Asset Store Upload")]
+    public static void HideBundleMenu()
+    {
+        int moved = 0;
+        foreach (var file in Directory.GetFiles(Root, "cardano-mint-sdk.bundle*", SearchOption.AllDirectories))
+        {
+            string rel = file.Replace('\\', '/').Substring(Root.Length + 1);
+            string dest = Path.Combine(HoldoutDir, rel);
+            Directory.CreateDirectory(Path.GetDirectoryName(dest));
+            File.Move(file, dest);
+            moved++;
+        }
+        AssetDatabase.Refresh();
+        Debug.Log($"[Cardano SDK Export] Moved {moved} bundle files to {HoldoutDir}. Upload now, then run '2. Restore Mesh Bundle'.");
+    }
+
+    [MenuItem("Tools/Cardano SDK/Publisher/2. Restore Mesh Bundle After Upload")]
+    public static void RestoreBundleMenu()
+    {
+        if (!Directory.Exists(HoldoutDir)) { Debug.Log("[Cardano SDK Export] Nothing to restore."); return; }
+        int moved = 0;
+        foreach (var file in Directory.GetFiles(HoldoutDir, "*", SearchOption.AllDirectories))
+        {
+            string rel = file.Replace('\\', '/').Substring(HoldoutDir.Length + 1);
+            string dest = Path.Combine(Root, rel);
+            if (File.Exists(dest)) { Debug.LogError("[Cardano SDK Export] Not overwriting " + dest); continue; }
+            File.Move(file, dest);
+            moved++;
+        }
+        AssetDatabase.Refresh();
+        Debug.Log($"[Cardano SDK Export] Restored {moved} bundle files into {Root}.");
+    }
+
     /// <summary>Returns human-readable problems; empty when the package is safe to export.</summary>
     public static List<string> Validate()
     {

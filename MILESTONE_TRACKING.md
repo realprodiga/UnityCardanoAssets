@@ -94,8 +94,9 @@
 | **📦 ASSET STORE SUBMISSION** | 🟡 | |
 | **1. Assets bundled & documented** | ✅ | [📘 CardanoSDK_Documentation.md](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [📄 Third-Party Notices.txt](CardanoSDK/Assets/CardanoSDK/Third-Party%20Notices.txt) |
 | &nbsp;&nbsp; 🔹 Guideline compliance pass (namespaces, single root folder, no keys/secrets, `Tools/` menus, third-party notices) | ✅ | This repository, v1.0.0 |
-| &nbsp;&nbsp; 🔹 Published free on the Unity Asset Store | ⬜ | _TODO: Asset Store URL_ |
-| **2. Contingency: hosted on GitHub** | ⬜ | _TODO: [Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0) (`.unitypackage` + documentation)_ |
+| &nbsp;&nbsp; 🔹 Submitted to the Unity Asset Store (free) | ✅ | Submitted 2026-10-27 as *Cardano Game Development SDK for Unity*: [🖼️ Submitted](Documentation/Images/M4_AssetStore_Submitted.png) · [🖼️ Pending, #1784 in curation queue](Documentation/Images/M4_AssetStore_Pending_Queue1784.png) · [🖼️ Unity confirmation email](Documentation/Images/M4_AssetStore_ConfirmationEmail.png) · [🖼️ Resubmitted under the final name](Documentation/Images/M4_AssetStore_Resubmitted_NewName.png) · [🖼️ Listing preview](Documentation/Images/M4_AssetStore_ListingPreview.png) |
+| &nbsp;&nbsp; 🔹 Published free on the Unity Asset Store | 🟡 | In Unity's review queue (~10 business days, then 1-3 days review). Store page: [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
+| **2. Contingency: hosted on GitHub** | ✅ | [📦 Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0) (`CardanoSDK_v1.0.0.unitypackage` + documentation + MeshJS bundle and licenses) |
 | **3. Demonstration video** | ⬜ | |
 | &nbsp;&nbsp; 🔹 Published to YouTube | ⬜ | _TODO_ |
 | &nbsp;&nbsp; 🔹 Added to the Asset Store listing | ⬜ | _TODO_ |
