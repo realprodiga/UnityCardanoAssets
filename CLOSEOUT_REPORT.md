@@ -7,6 +7,7 @@
 - **Funding:** 84,000 ADA
 - **Completion date:** 2026-10-31
 - **GitHub:** https://github.com/realprodiga/UnityCardanoAssets
+- **Close-out video:** https://youtu.be/hTamqiFrlSA
 - **All project videos (YouTube playlist):** https://www.youtube.com/playlist?list=PLOo6w61IkGqs
 
 ## Problem and goal
@@ -20,7 +21,7 @@ Resources for building Cardano games are scarce. The project set out to give Uni
 | M2: Unity WebGL Templates | CardanoBasic and CardanoResponsive (mobile-first), CIP-30 wallet connect and balance display | Approved. Live demos: https://realprodiga.github.io/UnityCardanoAssets/CardanoBasic/ and https://realprodiga.github.io/UnityCardanoAssets/CardanoResponsive/ |
 | M3: Unity Sample dApps | Gated Access, Awarding Tokens (treasury wallet) and Minting Tokens (NFT or fungible token, CIP-25 metadata), each with a scene, prefabs and tutorial; optional fee sponsorship | POA submitted 2026-10-31. Demo + tutorial video (real mainnet transactions): https://youtu.be/HfDrD3IEzA0 |
 | M4: Asset Store publication | v1.0.0 package with documentation, submitted free to the Unity Asset Store on 2026-10-27 (validator passed, in Unity's curation queue); GitHub release as the contingency; video shared on the Cardano Forum and X | POA submitted 2026-10-31. Release: https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0 · Video: https://youtu.be/p1_6gx1SeKo · Forum: https://forum.cardano.org/t/cardano-game-development-sdk-for-unity/157648 |
-| Final: Close-out | This report and the close-out video | See the Final section of the tracking spreadsheet |
+| Final: Close-out | This report and the close-out video | Video: https://youtu.be/hTamqiFrlSA |
 
 Criterion-by-criterion evidence for every milestone is in the trackable spreadsheet: https://github.com/realprodiga/UnityCardanoAssets/blob/main/MILESTONE_TRACKING.md
 

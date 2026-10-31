@@ -117,6 +117,6 @@
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
 | **📦 PROJECT CLOSEOUT** | **PENDING** | |
-| **1. Final Report & Video** | 🟡 | |
+| **1. Final Report & Video** | ✅ | |
 | &nbsp;&nbsp; 🔹 Final Closeout Report | ✅ | [📄 CLOSEOUT_REPORT.md](CLOSEOUT_REPORT.md) |
-| &nbsp;&nbsp; 🔹 Final Closeout Video | ⬜ | _TODO_ |
+| &nbsp;&nbsp; 🔹 Final Closeout Video | ✅ | [🎬 Close-out video](https://youtu.be/hTamqiFrlSA) |
