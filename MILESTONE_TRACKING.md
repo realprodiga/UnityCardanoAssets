@@ -63,24 +63,30 @@
 ---
 
 ## 🟡 Milestone 3: Unity Sample dApps
-**Status:** Development complete; demonstration video and proof of achievement pending.
+**Status:** Complete. Demonstration + tutorial video: [https://youtu.be/HfDrD3IEzA0](https://youtu.be/HfDrD3IEzA0). Playable preprod builds go live on the linked pages by 2026-11-02.
 
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
 | **📦 "GATED ACCESS" DAPP** | **PASS** | |
 | **1. Unity Scene & Prefabs** | ✅ | [🎬 GatedAccess.unity](CardanoSDK/Assets/CardanoSDK/Demo/Scenes/GatedAccess.unity) · [GatedGate.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/GatedGate.prefab) · [CheckpointZone.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/CheckpointZone.prefab) |
 | &nbsp;&nbsp; 🔹 Virtual barriers check for NFT | ✅ | [📄 GatedAccessController.cs](CardanoSDK/Assets/CardanoSDK/Scripts/GatedAccess/GatedAccessController.cs) · [📄 AccessCheckpoint.cs](CardanoSDK/Assets/CardanoSDK/Scripts/GatedAccess/AccessCheckpoint.cs) |
-| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.5, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · 🎬 Video: _TODO_ |
+| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.5, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [🎬 Tutorial video](https://youtu.be/HfDrD3IEzA0?t=170) |
+| &nbsp;&nbsp; 🔹 Video: dApp functionality | ✅ | [🎬 Demo video](https://youtu.be/HfDrD3IEzA0?t=20) (recorded on mainnet) |
+| &nbsp;&nbsp; 🔹 Playable version | 🟡 | [🎮 GatedAccess](https://realprodiga.github.io/UnityCardanoAssets/GatedAccess/) (preprod testnet build, live by 2026-11-02) |
 | | | |
 | **📦 "AWARDING TOKENS" DAPP** | **PASS** | |
 | **1. Unity Scene & Prefabs** | ✅ | [🎬 AwardingTokens.unity](CardanoSDK/Assets/CardanoSDK/Demo/Scenes/AwardingTokens.unity) · [Treasury.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/Treasury.prefab) · [AwardStatusPanel.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/AwardStatusPanel.prefab) |
 | &nbsp;&nbsp; 🔹 Trigger event receives tokens | ✅ | [📄 AwardingController.cs](CardanoSDK/Assets/CardanoSDK/Scripts/Awarding/AwardingController.cs) |
-| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.7, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · 🎬 Video: _TODO_ |
+| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.7, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [🎬 Tutorial video](https://youtu.be/HfDrD3IEzA0?t=290) |
+| &nbsp;&nbsp; 🔹 Video: dApp functionality | ✅ | [🎬 Demo video](https://youtu.be/HfDrD3IEzA0?t=50) (recorded on mainnet) |
+| &nbsp;&nbsp; 🔹 Playable version | 🟡 | [🎮 AwardingTokens](https://realprodiga.github.io/UnityCardanoAssets/AwardingTokens/) (preprod testnet build, live by 2026-11-02) |
 | | | |
 | **📦 "MINTING TOKENS" DAPP** | **PASS** | |
 | **1. Unity Scene & Prefabs** | ✅ | [🎬 MintingTokens.unity](CardanoSDK/Assets/CardanoSDK/Demo/Scenes/MintingTokens.unity) · [Minter.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/Minter.prefab) · [MintStatusPanel.prefab](CardanoSDK/Assets/CardanoSDK/Prefabs/MintStatusPanel.prefab) |
 | &nbsp;&nbsp; 🔹 Option to mint NFT/Token | ✅ | [📄 MintingController.cs](CardanoSDK/Assets/CardanoSDK/Scripts/Minting/MintingController.cs) · [📄 MintConfigTypes.cs](CardanoSDK/Assets/CardanoSDK/Scripts/Minting/MintConfigTypes.cs) |
-| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.6, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · 🎬 Video: _TODO_ |
+| &nbsp;&nbsp; 🔹 Tutorial included | ✅ | [📘 Documentation §6.6, §7](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [🎬 Tutorial video](https://youtu.be/HfDrD3IEzA0?t=340) |
+| &nbsp;&nbsp; 🔹 Video: dApp functionality | ✅ | [🎬 Demo video](https://youtu.be/HfDrD3IEzA0?t=80) (recorded on mainnet) |
+| &nbsp;&nbsp; 🔹 Playable version | 🟡 | [🎮 MintingTokens](https://realprodiga.github.io/UnityCardanoAssets/MintingTokens/) (preprod testnet build, live by 2026-11-02) |
 
 ---
 
