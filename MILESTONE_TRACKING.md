@@ -91,7 +91,7 @@
 ---
 
 ## 🟡 Milestone 4: Asset Store Publication
-**Status:** IN PROGRESS
+**Status:** Submitted to the Unity Asset Store (pending Unity's curation); contingency release live on GitHub; video published and shared.
 
 **Acceptance criteria:** (1) the asset bundle and documentation pass the Unity Asset Store submission process under the current [Submission Guidelines](https://assetstore.unity.com/publishing/submission-guidelines); (2) contingency: asset bundle and documentation hosted on GitHub.
 
@@ -103,11 +103,11 @@
 | &nbsp;&nbsp; 🔹 Submitted to the Unity Asset Store (free) | ✅ | Submitted 2026-10-27 as *Cardano Game Development SDK for Unity*: [🖼️ Submitted](Documentation/Images/M4_AssetStore_Submitted.png) · [🖼️ Pending, #1784 in curation queue](Documentation/Images/M4_AssetStore_Pending_Queue1784.png) · [🖼️ Unity confirmation email](Documentation/Images/M4_AssetStore_ConfirmationEmail.png) · [🖼️ Resubmitted under the final name](Documentation/Images/M4_AssetStore_Resubmitted_NewName.png) · [🖼️ Listing preview](Documentation/Images/M4_AssetStore_ListingPreview.png) |
 | &nbsp;&nbsp; 🔹 Published free on the Unity Asset Store | 🟡 | In Unity's review queue (~10 business days, then 1-3 days review). Store page: [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
 | **2. Contingency: hosted on GitHub** | ✅ | [📦 Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0) (`CardanoSDK_v1.0.0.unitypackage` + documentation + MeshJS bundle and licenses) |
-| **3. Demonstration video** | ⬜ | |
-| &nbsp;&nbsp; 🔹 Published to YouTube | ⬜ | _TODO_ |
-| &nbsp;&nbsp; 🔹 Added to the Asset Store listing | ⬜ | _TODO_ |
-| &nbsp;&nbsp; 🔹 Shared on Cardano Forum | ⬜ | _TODO_ |
-| &nbsp;&nbsp; 🔹 Shared on social media | ⬜ | _TODO_ |
+| **3. Demonstration video** | 🟡 | [🎬 M4 video](https://youtu.be/p1_6gx1SeKo) · [🎬 M3 sample dApps demo + tutorial](https://youtu.be/HfDrD3IEzA0) · [▶️ All project videos (playlist)](https://www.youtube.com/playlist?list=PLOo6w61IkGqs) |
+| &nbsp;&nbsp; 🔹 Published to YouTube | ✅ | [https://youtu.be/p1_6gx1SeKo](https://youtu.be/p1_6gx1SeKo) · [playlist](https://www.youtube.com/playlist?list=PLOo6w61IkGqs) |
+| &nbsp;&nbsp; 🔹 Added to the Asset Store listing | 🟡 | Added to the listing's Media once Unity approves the package (editing now would only create a draft) |
+| &nbsp;&nbsp; 🔹 Shared on Cardano Forum | ✅ | [Cardano Forum post](https://forum.cardano.org/t/cardano-game-development-sdk-for-unity/157648) |
+| &nbsp;&nbsp; 🔹 Shared on social media | ✅ | [X post](https://x.com/realprodiga/status/2116671287443825015) |
 
 ---
 
