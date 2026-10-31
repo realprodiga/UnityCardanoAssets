@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minting Tokens | Cardano SDK</title><style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1b1f24;--muted:#5b6470;--accent:#0033ad;--border:#e2e5ea;--note:#fff7e0;--note-border:#f0d48a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1216;--card:#171b21;--fg:#e8ebef;--muted:#9aa3ad;--accent:#7aa2ff;--border:#2a3038;--note:#2a2410;--note-border:#6b5a22}}
+:root[data-theme="dark"]{--bg:#0f1216;--card:#171b21;--fg:#e8ebef;--muted:#9aa3ad;--accent:#7aa2ff;--border:#2a3038;--note:#2a2410;--note-border:#6b5a22}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:32px 16px 48px}
+a{color:var(--accent)}h1{font-size:1.8rem;margin:.2em 0 .3em}h2{font-size:1.1rem;margin:1.6em 0 .5em}
+.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:14px 0}
+.note{background:var(--note);border:1px solid var(--note-border);border-radius:10px;padding:14px 18px;margin:18px 0}
+ul{padding-left:1.2em}li{margin:.3em 0}.muted{color:var(--muted)}footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+.grid{display:grid;gap:14px}.grid a.card{display:block;text-decoration:none;color:inherit}.grid a.card:hover{border-color:var(--accent)}
+</style></head>
+<body><main>
+<div class="kicker"><a href="../">Cardano SDK for Unity: sample dApps</a></div>
+<h1>Minting Tokens</h1>
+<p>Mints a new asset to the player's wallet under the game's policy: an NFT (quantity 1, CIP-25 metadata) or a fungible native token (any quantity), from the same Minter component.</p>
+<div class="note"><strong>Playable build: going live by 2 November 2026.</strong><br>
+This page will host a playable WebGL build on the Cardano <strong>preprod testnet</strong>, so anyone can try it free with test ADA (tADA) and a CIP-30 wallet such as Eternl set to Preprod. Until then, the dApp is shown working on <strong>mainnet</strong> in the demo video below.</div>
+<h2>Videos</h2>
+<ul><li>Demo: dApp functionality <span class="muted">(link coming shortly)</span></li><li>Tutorial: setting it up in Unity <span class="muted">(link coming shortly)</span></li></ul>
+<h2>Source and docs</h2>
+<ul>
+<li><a href="https://github.com/realprodiga/UnityCardanoAssets">GitHub repository</a> (v1.0.0 release, Unity package)</li>
+<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md#66-mintingcontroller-minting-tokens">Component documentation</a></li>
+<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md#9-building-and-testing-webgl">Build and run it yourself</a> (docs §9: open the demo scene, build for WebGL, serve locally)</li>
+<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/MILESTONE_TRACKING.md">Milestone tracking spreadsheet</a></li>
+</ul>
+<footer>Cardano Game Development SDK for Unity · Project Catalyst Fund 12 · <a href="https://github.com/realprodiga/UnityCardanoAssets">GitHub</a></footer>
+</main></body></html>
