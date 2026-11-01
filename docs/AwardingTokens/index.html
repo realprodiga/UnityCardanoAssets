@@ -1,32 +1,58 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Awarding Tokens | Cardano SDK</title><style>
-:root{--bg:#f7f8fa;--card:#fff;--fg:#1b1f24;--muted:#5b6470;--accent:#0033ad;--border:#e2e5ea;--note:#fff7e0;--note-border:#f0d48a}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1216;--card:#171b21;--fg:#e8ebef;--muted:#9aa3ad;--accent:#7aa2ff;--border:#2a3038;--note:#2a2410;--note-border:#6b5a22}}
-:root[data-theme="dark"]{--bg:#0f1216;--card:#171b21;--fg:#e8ebef;--muted:#9aa3ad;--accent:#7aa2ff;--border:#2a3038;--note:#2a2410;--note-border:#6b5a22}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-main{max-width:760px;margin:0 auto;padding:32px 16px 48px}
-a{color:var(--accent)}h1{font-size:1.8rem;margin:.2em 0 .3em}h2{font-size:1.1rem;margin:1.6em 0 .5em}
-.kicker{color:var(--muted);font-size:.9rem;text-transform:uppercase;letter-spacing:.06em}
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;margin:14px 0}
-.note{background:var(--note);border:1px solid var(--note-border);border-radius:10px;padding:14px 18px;margin:18px 0}
-ul{padding-left:1.2em}li{margin:.3em 0}.muted{color:var(--muted)}footer{margin-top:40px;color:var(--muted);font-size:.85rem}
-.grid{display:grid;gap:14px}.grid a.card{display:block;text-decoration:none;color:inherit}.grid a.card:hover{border-color:var(--accent)}
-</style></head>
-<body><main>
-<div class="kicker"><a href="../">Cardano SDK for Unity: sample dApps</a></div>
-<h1>Awarding Tokens</h1>
-<p>Sends existing native tokens from a treasury wallet to the player when they complete something in the game. The player signs for the fee; the treasury signs to release the tokens.</p>
-<div class="note"><strong>Playable build: going live by 2 November 2026.</strong><br>
-This page will host a playable WebGL build on the Cardano <strong>preprod testnet</strong>, so anyone can try it free with test ADA (tADA) and a CIP-30 wallet such as Eternl set to Preprod. Until then, the dApp is shown working on <strong>mainnet</strong> in the demo video below.</div>
-<h2>Videos</h2>
-<ul><li><a href="https://youtu.be/HfDrD3IEzA0?t=50">Demo: dApp functionality</a></li><li><a href="https://youtu.be/HfDrD3IEzA0?t=290">Tutorial: setting it up in Unity</a></li></ul>
-<h2>Source and docs</h2>
-<ul>
-<li><a href="https://github.com/realprodiga/UnityCardanoAssets">GitHub repository</a> (v1.0.0 release, Unity package)</li>
-<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md#67-awardingcontroller-awarding-tokens">Component documentation</a></li>
-<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md#9-building-and-testing-webgl">Build and run it yourself</a> (docs §9: open the demo scene, build for WebGL, serve locally)</li>
-<li><a href="https://github.com/realprodiga/UnityCardanoAssets/blob/main/MILESTONE_TRACKING.md">Milestone tracking spreadsheet</a></li>
-</ul>
-<footer>Cardano Game Development SDK for Unity · Project Catalyst Fund 12 · <a href="https://github.com/realprodiga/UnityCardanoAssets">GitHub</a></footer>
-</main></body></html>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Awarding Tokens (preprod)</title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div id="header-bar">
+        <span>Awarding Tokens (preprod)</span>
+        <button id="connect-btn" onclick="toggleWallet()">Connect Wallet</button>
+    </div>
+
+    <div id="canvas-container">
+      <canvas id="unity-canvas"></canvas>
+    </div>
+
+    <!-- Mesh SDK bundle: local copy if present (GitHub release), otherwise the pinned, integrity-checked copy on jsDelivr
+         (the Asset Store package ships without it -- see Third-Party Notices.txt). -->
+    <script src="cardano-mint-sdk.bundle.js"></script>
+    <script>window.CardanoMintSDK || document.write('<script src="https://cdn.jsdelivr.net/gh/realprodiga/UnityCardanoAssets@v1.0.0/CardanoSDK/Assets/CardanoSDK/WebGLTemplates/CardanoBasic/cardano-mint-sdk.bundle.js" integrity="sha384-PExqHCvhUNBdg5kkLp3IZS1ueB4GgtwVyxhdDD2WhOqXKqlIEeX8n16HFYeWJSkc" crossorigin="anonymous"><\/script>');</script>
+    <script src="script.js"></script>
+
+    <script>
+      var container = document.querySelector("#canvas-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var myGameInstance = null;
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/AwardingTokens.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/AwardingTokens.data",
+        frameworkUrl: buildUrl + "/AwardingTokens.framework.js",
+        codeUrl: buildUrl + "/AwardingTokens.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "prodiga",
+        productName: "Awarding Tokens (preprod)",
+        productVersion: "0.1",
+      };
+
+      var script = document.createElement("script");
+      script.src = loaderUrl;
+      script.onload = () => {
+        createUnityInstance(canvas, config, (progress) => {
+          // Loading bar logic could go here
+        }).then((unityInstance) => {
+          myGameInstance = unityInstance;
+        }).catch((message) => {
+          alert(message);
+        });
+      };
+      document.body.appendChild(script);
+    </script>
+  </body>
+</html>
