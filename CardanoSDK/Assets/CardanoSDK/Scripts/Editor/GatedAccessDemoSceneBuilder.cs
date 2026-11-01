@@ -228,6 +228,7 @@ namespace Prodiga.CardanoSDK.EditorTools
             controller.center = Vector3.zero;
 
             PlayerController playerController = player.AddComponent<PlayerController>();
+            player.AddComponent<MobileTouchControls>(); // joystick + look-drag, mobile browsers only
 
             GameObject body = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             body.name = "Body";

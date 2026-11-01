@@ -19,6 +19,10 @@ namespace Prodiga.CardanoSDK.Demo
     ///   - WASD moves relative to the camera's current yaw.
     ///   - Rotation priority: right-click steering (if held) always wins; otherwise the character
     ///     turns to face its movement direction while moving, and holds its last facing while idle.
+    ///
+    /// Touch / custom input:
+    ///   - ExternalMoveInput and ExternalLookDelta let another script drive the controller, e.g.
+    ///     MobileTouchControls on phones. Keyboard input wins over ExternalMoveInput when both are present.
     /// </summary>
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour
@@ -101,6 +105,11 @@ namespace Prodiga.CardanoSDK.Demo
         public bool IsFirstPerson => _currentZoomDistance <= FirstPersonThreshold;
         public bool IsSteering { get; private set; }
 
+        /// <summary>Analog move input (x = strafe, y = forward, magnitude up to 1), set every frame by another script such as MobileTouchControls.</summary>
+        [System.NonSerialized] public Vector2 ExternalMoveInput;
+        /// <summary>Look rotation in degrees (x = yaw, y = pitch) to apply this frame; added to by another script and consumed here.</summary>
+        [System.NonSerialized] public Vector2 ExternalLookDelta;
+
         private CharacterController _controller;
         private Vector3 _verticalVelocity;
         private bool _isGrounded;
@@ -142,6 +151,13 @@ namespace Prodiga.CardanoSDK.Demo
 
         private void HandleLookInput()
         {
+            if (ExternalLookDelta != Vector2.zero)
+            {
+                Yaw += ExternalLookDelta.x;
+                Pitch = Mathf.Clamp(Pitch + ExternalLookDelta.y, MinPitch, MaxPitch);
+                ExternalLookDelta = Vector2.zero;
+            }
+
             bool leftHeld = EnableLeftClickOrbit && Input.GetMouseButton(0);
             bool rightHeld = EnableRightClickSteer && Input.GetMouseButton(1);
             bool anyHeld = leftHeld || rightHeld;
@@ -284,6 +300,15 @@ namespace Prodiga.CardanoSDK.Demo
         {
             float horizontal = Input.GetAxisRaw("Horizontal");
             float vertical = Input.GetAxisRaw("Vertical");
+            // Keyboard is digital (full speed); external input such as a touch joystick is analog.
+            float magnitude = 1f;
+            if (Mathf.Approximately(horizontal, 0f) && Mathf.Approximately(vertical, 0f))
+            {
+                Vector2 external = Vector2.ClampMagnitude(ExternalMoveInput, 1f);
+                horizontal = external.x;
+                vertical = external.y;
+                magnitude = external.magnitude;
+            }
             if (Mathf.Approximately(horizontal, 0f) && Mathf.Approximately(vertical, 0f)) return Vector3.zero;
 
             Quaternion cameraYawRotation = Quaternion.Euler(0f, Yaw, 0f);
@@ -292,7 +317,7 @@ namespace Prodiga.CardanoSDK.Demo
 
             Vector3 direction = forward * vertical + right * horizontal;
             direction.y = 0f;
-            return direction.normalized;
+            return direction.normalized * magnitude;
         }
     }
 }

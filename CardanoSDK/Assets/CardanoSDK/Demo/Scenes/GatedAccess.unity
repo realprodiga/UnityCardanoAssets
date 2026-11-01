@@ -661,6 +661,7 @@ GameObject:
   - component: {fileID: 799267867}
   - component: {fileID: 799267866}
   - component: {fileID: 799267865}
+  - component: {fileID: 799267868}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -765,6 +766,25 @@ Transform:
   - {fileID: 340385665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &799267868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799267864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e4cdb7ad8484468e06934da45f423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowOnDesktop: 0
+  JoystickAreaWidth: 0.45
+  JoystickRadius: 0.11
+  BaseColor: {r: 1, g: 1, b: 1, a: 0.18}
+  KnobColor: {r: 1, g: 1, b: 1, a: 0.45}
+  LookSensitivity: 180
+  InvertY: 0
 --- !u!1 &847774559
 GameObject:
   m_ObjectHideFlags: 0
