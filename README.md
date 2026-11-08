@@ -27,7 +27,7 @@ Developed with support from **Project Catalyst Fund 12**, this SDK provides ligh
 
 ## 📥 Installation
 
-*   **Unity Asset Store:** search for **Cardano Game Development SDK** (free), then import it from *Package Manager > My Assets*.
+*   **Unity Asset Store** (free; listing pending Unity's review): once live, search for **Cardano Game Development SDK**, then import it from *Package Manager > My Assets*.
 *   **GitHub release:** download `CardanoSDK_v1.0.0.unitypackage` from [Releases](https://github.com/realprodiga/UnityCardanoAssets/releases) and use *Assets > Import Package > Custom Package...*.
 *   **From source:** clone this repository and copy `CardanoSDK/Assets/CardanoSDK` into your project's `Assets` folder.
 
@@ -164,7 +164,7 @@ Finally, scroll down to the `OnEnable()` function. We need to make sure the clas
 *   ✅ **Milestone 1:** Core Integration Scripts (Blockfrost & Koios)
 *   ✅ **Milestone 2:** Unity WebGL Templates (Wallet Connection & Responsive Design)
 *   ✅ **Milestone 3:** Sample dApps (Gated Access, Minting, Token Awards)
-*   🟡 **Milestone 4:** Unity Asset Store Publication
+*   ✅ **Milestone 4:** Unity Asset Store Publication (GitHub release v1.0.0; Asset Store listing pending Unity's review)
 
 Detailed status and evidence: [MILESTONE_TRACKING.md](MILESTONE_TRACKING.md)
 

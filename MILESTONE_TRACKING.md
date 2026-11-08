@@ -2,15 +2,15 @@
 
 **Project:** Cardano Game Development SDK for Unity (Project Catalyst Fund 12)
 **Repository:** [UnityCardanoAssets](https://github.com/realprodiga/UnityCardanoAssets)
-**Last updated:** 2026-10-27
+**Last updated:** 2026-11-07
 
 | Milestone | Status |
 | :--- | :---: |
 | 1. Cardano Integration Scripts | ✅ **COMPLETE** (approved) |
 | 2. Unity WebGL Templates | ✅ **COMPLETE** (approved) |
-| 3. Unity Sample dApps | 🟡 **DEVELOPMENT COMPLETE**, proof of achievement pending |
-| 4. Asset Store Publication | 🟡 **IN PROGRESS** |
-| Final: Closeout | ⬜ PENDING |
+| 3. Unity Sample dApps | ✅ **COMPLETE** (approved, signed off 2026-11-05) |
+| 4. Asset Store Publication | ✅ **COMPLETE** via the GitHub contingency criterion; Asset Store listing pending Unity's review |
+| Final: Closeout | 🟡 Submitted 2026-10-31, under review |
 
 ---
 
@@ -62,8 +62,8 @@
 
 ---
 
-## 🟡 Milestone 3: Unity Sample dApps
-**Status:** Complete. Demonstration + tutorial video: [https://youtu.be/HfDrD3IEzA0](https://youtu.be/HfDrD3IEzA0). Playable preprod builds are live on the linked pages (2026-11-01).
+## 🏁 Milestone 3: Unity Sample dApps
+**Status:** **COMPLETE** (approved, signed off 2026-11-05). Demonstration + tutorial video: [https://youtu.be/HfDrD3IEzA0](https://youtu.be/HfDrD3IEzA0). Playable preprod builds are live on the linked pages (2026-11-01).
 
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
@@ -90,33 +90,40 @@
 
 ---
 
-## 🟡 Milestone 4: Asset Store Publication
-**Status:** Submitted to the Unity Asset Store (pending Unity's curation); contingency release live on GitHub; video published and shared.
+## 🏁 Milestone 4: Asset Store Publication
+**Status:** **COMPLETE** via the contingency criterion: the asset bundle and documentation are hosted on GitHub ([Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0)). The package is also submitted to the Unity Asset Store and waiting in Unity's curation queue; the listing link will be added here when it goes live.
 
-**Acceptance criteria:** (1) the asset bundle and documentation pass the Unity Asset Store submission process under the current [Submission Guidelines](https://assetstore.unity.com/publishing/submission-guidelines); (2) contingency: asset bundle and documentation hosted on GitHub.
+**Acceptance criteria (from the Statement of Milestones):** asset bundle and documentation pass the Unity Asset Store submission process under the current [Submission Guidelines](https://assetstore.unity.com/publishing/submission-guidelines); **contingency plan: host asset bundle and documentation on GitHub.**
+
+> **Note on the contingency:** Unity's curation queue is outside the project's control. The Catalyst Team confirmed by email on 2026-11-05 (support ticket) that the M4 submission can stand on the GitHub contingency listed in the SoM, with no need to resubmit while Unity's review is pending, and asked that release v1.0.0 be kept unchanged.
 
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
-| **📦 ASSET STORE SUBMISSION** | 🟡 | |
-| **1. Assets bundled & documented** | ✅ | [📘 CardanoSDK_Documentation.md](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [📄 Third-Party Notices.txt](CardanoSDK/Assets/CardanoSDK/Third-Party%20Notices.txt) |
-| &nbsp;&nbsp; 🔹 Guideline compliance pass (namespaces, single root folder, no keys/secrets, `Tools/` menus, third-party notices) | ✅ | This repository, v1.0.0 |
+| **📦 ASSET BUNDLE & DOCUMENTATION** | **PASS** | |
+| **1. Contingency: hosted on GitHub** | ✅ | [📦 Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0) (`CardanoSDK_v1.0.0.unitypackage` + documentation + MeshJS bundle and licenses), published 2026-10-27 |
+| **2. Assets bundled & documented** | ✅ | [📘 CardanoSDK_Documentation.md](CardanoSDK/Assets/CardanoSDK/Documentation/CardanoSDK_Documentation.md) · [📄 Third-Party Notices.txt](CardanoSDK/Assets/CardanoSDK/Third-Party%20Notices.txt) |
+| &nbsp;&nbsp; 🔹 Built to the Submission Guidelines (namespaces, single root folder, no keys/secrets, `Tools/` menus, third-party notices) | ✅ | This repository, v1.0.0; passed Unity's Asset Store validator |
 | &nbsp;&nbsp; 🔹 Submitted to the Unity Asset Store (free) | ✅ | Submitted 2026-10-27 as *Cardano Game Development SDK for Unity*: [🖼️ Submitted](Documentation/Images/M4_AssetStore_Submitted.png) · [🖼️ Pending, #1784 in curation queue](Documentation/Images/M4_AssetStore_Pending_Queue1784.png) · [🖼️ Unity confirmation email](Documentation/Images/M4_AssetStore_ConfirmationEmail.png) · [🖼️ Resubmitted under the final name](Documentation/Images/M4_AssetStore_Resubmitted_NewName.png) · [🖼️ Listing preview](Documentation/Images/M4_AssetStore_ListingPreview.png) |
-| &nbsp;&nbsp; 🔹 Published free on the Unity Asset Store | 🟡 | In Unity's review queue (~10 business days, then 1-3 days review). Store page: [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
-| **2. Contingency: hosted on GitHub** | ✅ | [📦 Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0) (`CardanoSDK_v1.0.0.unitypackage` + documentation + MeshJS bundle and licenses) |
-| **3. Demonstration video** | 🟡 | [🎬 M4 video](https://youtu.be/p1_6gx1SeKo) · [🎬 M3 sample dApps demo + tutorial](https://youtu.be/HfDrD3IEzA0) · [▶️ All project videos (playlist)](https://www.youtube.com/playlist?list=PLOo6w61IkGqs) |
+| **3. Demonstration video** | ✅ | [🎬 M4 video](https://youtu.be/p1_6gx1SeKo) · [🎬 M3 sample dApps demo + tutorial](https://youtu.be/HfDrD3IEzA0) · [▶️ All project videos (playlist)](https://www.youtube.com/playlist?list=PLOo6w61IkGqs) |
 | &nbsp;&nbsp; 🔹 Published to YouTube | ✅ | [https://youtu.be/p1_6gx1SeKo](https://youtu.be/p1_6gx1SeKo) · [playlist](https://www.youtube.com/playlist?list=PLOo6w61IkGqs) |
-| &nbsp;&nbsp; 🔹 Added to the Asset Store listing | 🟡 | Added to the listing's Media once Unity approves the package (editing now would only create a draft) |
 | &nbsp;&nbsp; 🔹 Shared on Cardano Forum | ✅ | [Cardano Forum post](https://forum.cardano.org/t/cardano-game-development-sdk-for-unity/157648) |
 | &nbsp;&nbsp; 🔹 Shared on social media | ✅ | [X post](https://x.com/realprodiga/status/2116671287443825015) |
 
+**Follow-up (after Unity's review, not blocking M4):**
+
+| Item | Status | Notes |
+| :--- | :---: | :--- |
+| Unity Asset Store listing live | ⏳ | Pending in Unity's curation queue: #1784 on 2026-10-27 (submission), #1374 on 2026-10-31, #1226 on 2026-11-07. Store page (live once approved): [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
+| Demo video added to the Asset Store listing | ⏳ | Added to the listing's Media once Unity approves the package (editing earlier only creates a draft) |
+
 ---
 
-## ⏳ Final Milestone: Closeout
-**Status:** PENDING
+## 🟡 Final Milestone: Closeout
+**Status:** Submitted 2026-10-31, under review.
 
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
-| **📦 PROJECT CLOSEOUT** | **PENDING** | |
+| **📦 PROJECT CLOSEOUT** | **SUBMITTED** | |
 | **1. Final Report & Video** | ✅ | |
 | &nbsp;&nbsp; 🔹 Final Closeout Report | ✅ | [📄 CLOSEOUT_REPORT.md](CLOSEOUT_REPORT.md) |
 | &nbsp;&nbsp; 🔹 Final Closeout Video | ✅ | [🎬 Close-out video](https://youtu.be/hTamqiFrlSA) |
