@@ -2,14 +2,14 @@
 
 **Project:** Cardano Game Development SDK for Unity (Project Catalyst Fund 12)
 **Repository:** [UnityCardanoAssets](https://github.com/realprodiga/UnityCardanoAssets)
-**Last updated:** 2026-11-07
+**Last updated:** 2026-11-10
 
 | Milestone | Status |
 | :--- | :---: |
 | 1. Cardano Integration Scripts | ✅ **COMPLETE** (approved) |
 | 2. Unity WebGL Templates | ✅ **COMPLETE** (approved) |
 | 3. Unity Sample dApps | ✅ **COMPLETE** (approved, signed off 2026-11-05) |
-| 4. Asset Store Publication | ✅ **COMPLETE** via the GitHub contingency criterion; Asset Store listing pending Unity's review |
+| 4. Asset Store Publication | 🟡 **IN PROGRESS**: GitHub contingency met; waiting for the Unity Asset Store listing to go live (pending Unity's review) |
 | Final: Closeout | 🟡 Submitted 2026-10-31, under review |
 
 ---
@@ -90,12 +90,12 @@
 
 ---
 
-## 🏁 Milestone 4: Asset Store Publication
-**Status:** **COMPLETE** via the contingency criterion: the asset bundle and documentation are hosted on GitHub ([Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0)). The package is also submitted to the Unity Asset Store and waiting in Unity's curation queue; the listing link will be added here when it goes live.
+## 🟡 Milestone 4: Asset Store Publication
+**Status:** **IN PROGRESS.** The GitHub contingency is met: the asset bundle and documentation are hosted on GitHub ([Release v1.0.0](https://github.com/realprodiga/UnityCardanoAssets/releases/tag/v1.0.0)). The package is submitted to the Unity Asset Store and waiting in Unity's curation queue. M4 will be marked complete once the listing is live; the listing link will be added here at that point.
 
 **Acceptance criteria (from the Statement of Milestones):** asset bundle and documentation pass the Unity Asset Store submission process under the current [Submission Guidelines](https://assetstore.unity.com/publishing/submission-guidelines); **contingency plan: host asset bundle and documentation on GitHub.**
 
-> **Note on the contingency:** Unity's curation queue is outside the project's control. The Catalyst Team confirmed by email on 2026-11-05 (support ticket) that the M4 submission can stand on the GitHub contingency listed in the SoM, with no need to resubmit while Unity's review is pending, and asked that release v1.0.0 be kept unchanged.
+> **Note on review status:** Per the Catalyst Team (support ticket, 2026-11-10), the M4 PoA stays as submitted and should not be resubmitted. The GitHub contingency criterion is covered; sign-off waits for the Unity Asset Store listing to go live. Release v1.0.0 is kept unchanged, since the M4 submission points to it.
 
 | Component / Criteria | Status | Evidence |
 | :--- | :---: | :--- |
@@ -109,12 +109,13 @@
 | &nbsp;&nbsp; 🔹 Shared on Cardano Forum | ✅ | [Cardano Forum post](https://forum.cardano.org/t/cardano-game-development-sdk-for-unity/157648) |
 | &nbsp;&nbsp; 🔹 Shared on social media | ✅ | [X post](https://x.com/realprodiga/status/2116671287443825015) |
 
-**Follow-up (after Unity's review, not blocking M4):**
+**Remaining for M4 sign-off:**
 
 | Item | Status | Notes |
 | :--- | :---: | :--- |
-| Unity Asset Store listing live | ⏳ | Pending in Unity's curation queue: #1784 on 2026-10-27 (submission), #1374 on 2026-10-31, #1226 on 2026-11-07. Store page (live once approved): [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
+| Unity Asset Store listing live | ⏳ | Pending in Unity's curation queue: #1784 on 2026-10-27 (submission), #1374 on 2026-10-31, #1226 on 2026-11-07, #1032 on 2026-11-10. Store page (live once approved): [assetstore.unity.com/packages/slug/422888](https://assetstore.unity.com/packages/slug/422888) |
 | Demo video added to the Asset Store listing | ⏳ | Added to the listing's Media once Unity approves the package (editing earlier only creates a draft) |
+| Listing link added here and in the README; Milestone Reviewers notified | ⏳ | Via the PoA Discussion panel, plus a reply on the Catalyst support ticket |
 
 ---
 

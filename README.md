@@ -164,7 +164,7 @@ Finally, scroll down to the `OnEnable()` function. We need to make sure the clas
 *   ✅ **Milestone 1:** Core Integration Scripts (Blockfrost & Koios)
 *   ✅ **Milestone 2:** Unity WebGL Templates (Wallet Connection & Responsive Design)
 *   ✅ **Milestone 3:** Sample dApps (Gated Access, Minting, Token Awards)
-*   ✅ **Milestone 4:** Unity Asset Store Publication (GitHub release v1.0.0; Asset Store listing pending Unity's review)
+*   🟡 **Milestone 4:** Unity Asset Store Publication (GitHub release v1.0.0 is live; Asset Store listing pending Unity's review)
 
 Detailed status and evidence: [MILESTONE_TRACKING.md](MILESTONE_TRACKING.md)
 
